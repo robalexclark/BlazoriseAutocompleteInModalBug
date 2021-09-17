@@ -1,0 +1,273 @@
+﻿a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.navbar-custom {
+    background-color: #0097D1;
+}
+
+    /* change the brand and text color */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: white;
+    }
+    /* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+        color: white;
+    }
+    /* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: #ABABAB;
+    }
+
+.accordian-header {
+    padding: .1rem;
+}
+/* Fixes dropdown menus placed on the right side */
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    margin-right: 15px !important;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+.narrow-divider {
+    margin: 0;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #0097D1;
+    border-color: #E8E8E8;
+}
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+        color: white;
+        background-color: #572C8B;
+    }
+
+.bg-primary {
+    background-color: #0097D1 !important;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #E8E8E8;
+    border-color: #0097D1;
+}
+
+.nav-tabs .nav-link {
+    background-color: aliceblue;
+    border-color: lightgray;
+    color: black;
+}
+
+
+html {
+    font-size: 14px;
+}
+
+div[disabled] {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+
+.sidebar {
+    min-width: 250px;
+    position: fixed;
+    background-color: #E8E8E8;
+    max-width: unset;
+    z-index: 999;
+}
+
+.sidebar-content {
+    margin: 10px;
+}
+
+.searchbar {
+    background-color: #0097D1;
+    color: #E8E8E8;
+    cursor: pointer;
+}
+
+.searchbar-title {
+    transform: rotate(-90deg);
+    font-size: 1.5em;
+    color: white;
+    margin-top: 70px;
+    max-width: 40px;
+}
+
+
+.main-panel {
+    padding-left: 40px;
+    width: 100vw;
+    padding-right: 10px;
+}
+
+.housing-panel {
+    width: 100vw;
+    height: 100vh;
+    padding-right: 40px;
+}
+
+.custom-select {
+    min-width: 200px;
+}
+
+.input-width {
+    width: 200px;
+}
+
+.is-disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.is-enabled {
+    pointer-events: unset;
+    opacity: unset;
+}
+
+.form-row {
+    display: unset;
+}
+
+
+label {
+    margin-bottom: 0.25rem;
+}
+
+.form-group {
+    margin-bottom: 0.6rem;
+}
+
+.modal-header {
+    padding: 0.4rem 1rem;
+}
+
+.modal-body {
+    padding: 0.4rem 1rem;
+    max-width: 500px;
+    max-height: 70vh;
+    overflow-x: hidden;
+}
+
+.modal-content {
+    top: 60px;
+}
+
+.modal-footer {
+    padding: 0.4rem 1rem;
+}
+
+
+.bulk-allocations-modal-content {
+    max-width: 800px;
+}
+
+.form-group.px-2.py-2 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.page-item.active.disabled > .page-link {
+    background-color: #0097D1;
+    color: white;
+}
+
+.bottom-pane {
+    z-index: 100;
+    position: relative;
+    background-color: white;
+}
+
+.table thead th {
+    white-space: nowrap;
+    background-color: lightsteelblue !important;
+}
+
+
+.btn-group-sm > .btn, .btn-sm {
+    font-size: 0.825rem;
+    margin-left: 6px;
+}
+
+
+
+.pagination {
+    cursor: pointer;
+}
+
+.page-link {
+    padding: .3rem .6rem;
+}
+
+
+
+.sk-chase {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
+    color: #0097D1;
+    z-index:999;
+}
+
+.spin-icon {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin2 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

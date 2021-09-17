@@ -1,0 +1,33 @@
+﻿@inherits LayoutComponentBase
+
+<header>
+    <nav class="navbar navbar-dark fixed-top navbar-expand-xl navbar-toggleable-xl navbar-custom border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-xl-inline-flex flex-xl-row-reverse">
+
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Setup
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <NavLink class="dropdown-item" href="/Colonies" Match="NavLinkMatch.All">
+                                <span class="oi oi-home" aria-hidden="true"></span> Colonies
+                            </NavLink>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container-fluid" style="margin-top:50px">
+    <div class="row">
+        @Body
+    </div>
+</div>

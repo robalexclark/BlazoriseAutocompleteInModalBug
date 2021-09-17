@@ -1,0 +1,29 @@
+    <h3>Colonies</h3>
+
+
+
+    <Button  Color="Color.Primary" Clicked="@SetNewAllocationDisabled" >TOGGLE NEW BUTTON DISABLED STATUS</Button>
+    <Label>New button should be disabled=</Label>@newAllocationDisabled
+    <br />
+    <Label>This works in blazorise 9.3.10 but not in 9.4.0:</Label>
+
+    <br />
+
+    @if(colonies!=null)
+    {
+    <DataGrid ElementId="ColoniesGrid-DataGrid-0" TItem="Colony" Data="@colonies" Striped="true" Bordered="true" Editable="true" PageSize="30" ShowPager="true" Narrow="true" Resizable="true" RowSelectable="@(v => false)">
+
+        <DataGridColumn ElementId="ColoniesGrid-DataGridColumn-0" TItem="Colony" Field="ColonyName" Caption="Colony" />
+        <DataGridCheckColumn ElementId="ColoniesGrid-DataGridCheckColumn-0" TItem="Colony" Field="Archived" Caption="Archived">
+            <DisplayTemplate>
+                <Check ElementId="ColoniesGrid-Check-0" TValue="bool" Checked="@context.Archived" onclick="return false;" Style="margin-left:10px"/>
+            </DisplayTemplate>
+        </DataGridCheckColumn>
+
+          <DataGridCommandColumn ElementId="AllocationsGrid-DataGridCommandColumn-0" TItem="Colony" Width="125px">
+            <NewCommandTemplate>
+                <Button ElementId="AllocationsGrid-Button-0" Color="Color.Success" Clicked="@((e) => NewAllocation())" Disabled="@newAllocationDisabled" Class="btn-sm">NEW</Button>
+            </NewCommandTemplate>
+        </DataGridCommandColumn>
+    </DataGrid>
+    }
