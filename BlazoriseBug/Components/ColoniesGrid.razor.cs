@@ -6,45 +6,12 @@ namespace BlazoriseBug.Components
 {
     public partial class ColoniesGrid
     {
-        private IEnumerable<Colony> colonies;
+        private AnimalPicker animalPicker;
 
-        private bool isLoading { get; set; }
-
-        protected override async Task OnAfterRenderAsync(bool firstRender)
+        private void CovanceNoPicker()
         {
-            if (firstRender)
-            {
-                await RefreshColonies();
-            }
+             animalPicker.ShowAnimalPicker();
         }
 
-        private async Task RefreshColonies()
-        {
-            isLoading = true;
-            StateHasChanged();
-
-            //using (BlazoriseBugRepository cairsRepository = new BlazoriseBugRepository(CairsContextFactory.CreateDbContext(), AuthenticationStateProvider))
-            //{
-            colonies = new List<Colony>();
-            //}
-
-            isLoading = false;
-            StateHasChanged();
-        }
-
-
-        private bool newAllocationDisabled = false;
-
-        private void SetNewAllocationDisabled() //determine if the new allocation button is disabled
-        {
-            RefreshColonies();
-            newAllocationDisabled = !newAllocationDisabled;
-
-            StateHasChanged();
-        }
-
-        private void NewAllocation()
-        {
-        }
     }
 }

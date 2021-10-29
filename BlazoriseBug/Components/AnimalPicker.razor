@@ -1,0 +1,33 @@
+<Modal ElementId="AnimalPicker-Modal-0" @ref="modal" Closing="OnClosing">
+    <ModalContent ElementId="AnimalPicker-ModalContent-0" Centered=true>
+        <ModalHeader ElementId="AnimalPicker-ModalHeader-0">
+            <ModalTitle ElementId="AnimalPicker-ModalTitle-0">@title</ModalTitle>
+            <CloseButton ElementId="AnimalPicker-CloseButton-0" Clicked="@CloseAnimalPicker" />
+        </ModalHeader>
+        <ModalBody ElementId="AnimalPicker-ModalBody-0" Style="height:800px">
+
+            <Addons Class="my-2">
+                <Addon AddonType="AddonType.Body">
+                    <Autocomplete ElementId="AnimalPicker-Autocomplete-0" @ref="animalNosAutoComplete" TItem="string" TValue="string" Data="@autoCompleteAnimalNos" TextField="@(item=>item)" ValueField="@(item=>item)" SelectedValue="@autocompleteSelectedAnimalNo" SelectedValueChanged="@(e => {autocompleteSelectedAnimalNo = e?.ToString();} )" MinLength="3" Validator="@ValidateAnimalNo" />
+                </Addon>
+                <Addon AddonType="AddonType.End">
+                    <Button ElementId="AnimalPicker-Button-0" Color="Color.Info" Size="Size.ExtraSmall" Clicked="AddAnimal">Add</Button>
+                </Addon>
+            </Addons>
+
+            <DataGrid ElementId="AnimalPicker-DataGrid-0" TItem="AnimalSelection" Data="@selectedAnimalNos" Editable=true Narrow=true PageSize="20">
+                <DataGridColumn ElementId="AnimalPicker-DataGridColumn-0" TItem="AnimalSelection" Field="AnimalNo" Caption="Animal No" />
+
+                <DataGridCommandColumn ElementId="AnimalPicker-DataGridCommandColumn-0" TItem="AnimalSelection" Width="125px">
+                    <NewCommandTemplate>
+                    </NewCommandTemplate>
+                    <EditCommandTemplate>
+                    </EditCommandTemplate>
+                    <DeleteCommandTemplate>
+                        <Button ElementId="AnimalPicker-Button-1" Color="Color.Danger" Clicked="@((e) => DeleteAnimalNo(context))" Class="btn-sm">@context.LocalizationString</Button>
+                    </DeleteCommandTemplate>
+                </DataGridCommandColumn>
+            </DataGrid>
+        </ModalBody>
+    </ModalContent>
+</Modal>
