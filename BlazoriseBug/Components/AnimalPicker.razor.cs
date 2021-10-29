@@ -80,13 +80,13 @@ namespace BlazoriseBug.Components
             selectedAnimalNos.Remove(animalNo);
         }
 
-        private void OnClosing(ModalClosingEventArgs e)
-        {
-            if (e.CloseReason != CloseReason.UserClosing)
-            {
-                e.Cancel = true;
-            }
-        }
+        //private void OnClosing(ModalClosingEventArgs e)
+        //{
+        //    if (e.CloseReason != CloseReason.UserClosing)
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
 
         public string SelectedAnimalNosText
         {
